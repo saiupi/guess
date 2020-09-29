@@ -21,7 +21,7 @@ function checkGuess() {
             lastResult.style.backgroundColor = 'green';
             lowOrHi.textContent = '';
             setGameOver();
-        } else if (guessCount === 10) {
+        } else if (guessCount ===10) {
 
             lastResult.textContent = 'you have exceded the count';
             lowOrHi.textContent = "Guess Number is = " + randomNumber;
@@ -49,7 +49,10 @@ function setGameOver() {
     guessField.disabled = true;
     guessSubmit.disabled = true;
     resetButton = document.createElement('button');
-    resetButton.textContent = 'Play Again?';
+    resetButton.textContent = 'Again';
+    resetButton.style.backgroundColor = '#000';
+    resetButton.style.color = '#FFF';
+
     document.body.appendChild(resetButton);
     resetButton.addEventListener('click', resetGame);
 }
